@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>BelajarOnline - Belajar Lebih Mudah & Menyenangkan</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">BelajarOnline</div>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="features.html">Fitur</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+  <header>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Raih Impianmu dengan BelajarOnline</h1>
+        <p>Platform pembelajaran digital yang membuat belajar jadi seru, fleksibel, dan mudah diakses kapan saja.</p>
+        <a href="about.html" class="cta-button">Pelajari Lebih Lanjut</a>
+      </div>
+      <img src="logo belajar online.jpeg" alt="Ilustrasi Belajar" class="hero-img">
+    </div>
+  </header>
+  <div id="promo-popup" class="promo-popup">
+  <div class="popup-box">
+    <h2>Promo Spesial!</h2>
+    <p>Daftar hari ini dan nikmati <strong>diskon 20%</strong> untuk kelas premium!</p>
+    <button onclick="closePromo()">Tutup</button>
+  </div>
+</div>
+  <script>
+  function closePromo() {
+    document.getElementById("promo-popup").style.display = "none";
+    sessionStorage.setItem("popupShown", "true");
+  }
+
+  window.onload = function () {
+    if (!sessionStorage.getItem("popupShown")) {
+      setTimeout(function () {
+        document.getElementById("promo-popup").style.display = "flex";
+      }, 1000);
+    }
+  }
+</script>
+
+</body>
+</html>
