@@ -97,3 +97,44 @@ nav ul li a:hover {
   line-height: 1.6em;
   color: #34495e;
 }
+
+.gallery,
+.video-section {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Container utama yang membungkus galeri dan video */
+.features .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Galeri grid */
+.gallery-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Video styling */
+.video-section video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
